@@ -125,7 +125,7 @@ function(input, output, session) {
     }
     
     # We keep the pointA if it was already set
-    selectPoint(lat, lng) {
+    selectPoint <- function(lat, lng) {
         if(is.null(pointA)) {
             pointA <- c(lat, lng)
         } else {
