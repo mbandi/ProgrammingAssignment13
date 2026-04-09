@@ -15,6 +15,7 @@
 
 library(shiny)
 library(leaflet)
+library(raster)
 
 
 fluidPage(
@@ -25,9 +26,14 @@ fluidPage(
     
     sidebarLayout(
         sidebarPanel(
-            
-            h4("Details"),
-            textOutput("description")
+            tabsetPanel(type = "tabs", 
+                        tabPanel("Marker Details", br(), textOutput("description")), 
+                        tabPanel("Distance", br(), 
+                                 "Marker A: ", textOutput("markerA"), br(),
+                                 "Marker B: ", textOutput("markerB"), br(),
+                                 textOutput("distanceText"), br(),
+                                 actionButton("resetMarkers", "Reset"))
+            )
         ),
         
         
