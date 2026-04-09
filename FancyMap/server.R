@@ -20,8 +20,8 @@ library(raster)
 
 function(input, output, session) {
     
-    pointA <- NULL
-    pointB <- NULL
+    markerA <- NULL
+    markerB <- NULL
     
     output$map <- renderLeaflet({
         my_map <- leaflet() %>% 
@@ -72,7 +72,7 @@ function(input, output, session) {
         setDescription(input$map_marker_click$id)
         
         # Get the selected point info to calculate the distance
-        selectPoint(input$map_marker_click$lat, input$map_marker_click$lng)
+        selectMarker(input$map_marker_clickg)
     })
     
     # Check the Id and set the corresponding description
@@ -125,17 +125,17 @@ function(input, output, session) {
     }
     
     # We keep the pointA if it was already set
-    selectPoint <- function(lat, lng) {
-        if(is.null(pointA)) {
-            pointA <- c(lat, lng)
+    selectMarker <- function(selectedMarker) {
+        if(is.null(markerA)) {
+            markerA <- selectedMarker
         } else {
-            pointB <- c(lat, lng)
+            markerB <- selectedMarker
         }
     }
     
-    restartPoints <- function() {
-        pointA <- NULL
-        pointB <- NULL
+    restartMarkers <- function() {
+        markerA <- NULL
+        markerB <- NULL
     }
     
 }
