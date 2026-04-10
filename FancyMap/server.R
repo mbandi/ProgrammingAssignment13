@@ -90,7 +90,7 @@ function(input, output, session) {
         pointDistance(pointA, pointB, lonlat = TRUE)
     }
     
-    # Check the Id and set the corresponding description
+    # Check the Id and set the corresponding description for the marker
     setDescription <- function(markerId) {
         output$description <- renderText({
             if(markerId == "Bellaombra") {

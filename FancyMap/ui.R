@@ -27,8 +27,8 @@ fluidPage(
     sidebarLayout(
         sidebarPanel(
             tabsetPanel(type = "tabs", 
-                        tabPanel("Marker Details", br(), textOutput("description")), 
-                        tabPanel("Distance", br(), 
+                        tabPanel("Marker Details", br(), textOutput("description")), # Marker description
+                        tabPanel("Distance", br(),                                   # Distance between markers
                                  "Marker A: ", textOutput("markerA"), br(),
                                  "Marker B: ", textOutput("markerB"), br(),
                                  textOutput("distanceText"), br(),
