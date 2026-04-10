@@ -1,0 +1,58 @@
+---
+title: "Fancy Map App"
+author: "mbandi"
+date: "`r Sys.Date()`"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Fancy Map App
+
+The Fancy Map App is an extension of the leaflet assignment.
+
+
+It has a sidebar with two tabs
+
+    - The first tab is used to display the selected marker description.
+    - The second tab is used to show the distance between two markers. 
+
+The main panel is for the map
+
+    - Each marker has it's own popup and id, and belongs to a group.
+    - Groups can be shown/hidden with the checkboxes from the map.
+
+## Map functionality
+
+Selecting a marker will change the description shown in the 'Description' tab, but also save that marker for the distance calculation.
+
+When clicking multiple markers, the first one is kept, and the second is overridden. 
+
+To select a new initial marker there is a reset button in the 'Distance' tab.
+
+## Interaction and observers
+
+Most of the interaction occurs by selecting markers on the map. For this reason most of the changes are handled inside the `observeEvent(input$map_marker_click, {...})` event:
+
+    - Updates the description text
+    - Store the marker as either `markerA` or `markerB` (and the associated text)
+    - Updates the distance between the two selected markers
+    
+The `Reset` button has it's own observer and it's only purpose is to clear the selected markers and set the corresponding message
+
+## Distance calculation
+
+To calculate the distance between two markers I use the raster package.
+It's simple to use, it just needs the coordinates and returns the distance in meters.
+
+```{r load, echo=TRUE, message=FALSE}
+library(raster)
+```
+
+```{r dist, echo=TRUE}
+centralParkSouth <- c(-73.979005, 40.766994)
+centralParkNorth <- c(-73.955402, 40.799412)
+pointDistance(centralParkSouth, centralParkNorth, lonlat = TRUE)
+```
