@@ -27,8 +27,16 @@ fluidPage(
     sidebarLayout(
         sidebarPanel(
             tabsetPanel(type = "tabs", 
-                        tabPanel("Marker Details", br(), textOutput("description")), # Marker description
-                        tabPanel("Distance", br(),                                   # Distance between markers
+                        tabPanel("Info", br(), 
+                                 HTML("<ul>
+                                            <li>Use the checkboxes in the map to show/hide categories</li>
+                                            <li>'Details' tab shows the selected marker information</li>
+                                            <li>'Distance' tab show the distance between two markers</li>
+                                            <li>Use the 'Reset' button to remove marker selection</li>
+                                            <li>Enjoy the city!</li>
+                                      </ul>")),
+                        tabPanel("Details", br(), textOutput("description")), # Marker description
+                        tabPanel("Distance", br(),                            # Distance between markers
                                  "Marker A: ", textOutput("markerA"), br(),
                                  "Marker B: ", textOutput("markerB"), br(),
                                  textOutput("distanceText"), br(),
