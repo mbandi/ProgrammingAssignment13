@@ -96,35 +96,35 @@ function(input, output, session) {
             if(markerId == "Bellaombra") {
                 "We used to have beautiful trees here, but the city council chop them down :("
             } else if(markerId == "Sa Feixina") {
-                "It's a big park with different elevations. It's at the limit of the old town and the new part."
+                "Sa Feixina is a big park with different elevations. It's at the limit of the old town and the new part."
             } else if(markerId == "La Seu") {
                 "The cathedral was made to be seen from the sea, so you also get a nice view of it from most of the bay"
             } else if(markerId == "Pl. Mercat") {
-                "You can find some interesting modernist buildings around here, and it's close to a shopping area."
+                "Pl. Mercat ('Market sq') You can find some interesting modernist buildings around here, and it's close to a shopping area."
             } else if(markerId == "Cort") {
-                "This is the old city council square, but I particularly like the old olive tree. It's around 600 years old."
+                "Cort is the old city council square, but I particularly like the old olive tree. It's around 600 years old."
             } else if(markerId == "Pl. España") {
-                "Because you can't have a city in Spain without a Spain Square. Also the main place to get a taxi, bus or train. If you get lost, this is a good place to go."
+                "Pl. España. Because you can't have a city in Spain without a Spain Square. Also the main place to get a taxi, bus or train. If you get lost, this is a good place to go."
             } else if(markerId == "Claudio's") {
                 "Claudio's icre cream are the best. If you find a better ice cream in Palma let me know. It's closed in winter, though."
             } else if(markerId == "Temple Natura") {
-                "If you like vegan food, this place has a beautiful inner yard. If you don't, you can get some drinks. Sometimes they have live music."
+                "Temple Natura. If you like vegan food, this place has a beautiful inner yard. If you don't, you can get some drinks. Sometimes they have live music."
             } else if(markerId == "Quemado") {
-                "Great pizza and wonderful people :D"
+                "Quemado. Great pizza and wonderful people :D"
             } else if(markerId == "C. Fabrica") {
-                "You can find a lot of restaurants and places to drink here."
+                "In Fabrica st. you can find a lot of restaurants and places to drink."
             } else if(markerId == "C. Blanquerna") {
-                "You can find a lot of restaurants and coffe shops here."
+                "In Blanquerna st. you can find a lot of restaurants and coffe shops."
             } else if(markerId == "Maua") {
-                "This guys craft their own chocolate, with products from specific places. Like a specialty coffe shop, but for chocolate."
+                "The guys at Maüa guys craft their own chocolate, with products from specific places. Like a specialty coffe shop, but for chocolate."
             } else if(markerId == "Baluar d'es Princep") {
-                "This was part of the old defensive wall of the city, and is 'newly restored'. There are some nice views from up there."
+                "Baluar d'es Princep was part of the old defensive wall of the city, and is 'newly restored'. There are some nice views from up there."
             } else if(markerId == "La Rambla") {
-                "There are some nice views from the top of the stairs. Specially around christmass."
+                "La Rambla has some nice views from the top of the stairs. Specially around christmass."
             } else if(markerId == "Dalt Murada") {
-                "This is a nice walk and you get to see the bay and sea."
+                "Dalt Murada. Going on top of the old wall is a nice walk and you get to see the bay and sea."
             } else if(markerId == "Es Baluard views 1") {
-                "The west limit of the old wall, you can have some views from here. The cathedral, the bay and Bellver."
+                "Es Baluard is the west limit of the old wall, you can have some views from here. The cathedral, the bay and Bellver."
             } else if(markerId == "Es Baluard views 2") {
                 "There are not a lot of places to see the rooftop os the old town buildings, this is one of them."
             } else if(markerId == "Bellver") {
@@ -134,9 +134,9 @@ function(input, output, session) {
             } else if(markerId == "Museo Mallorca") {
                 "Mallorca's historic art museum, it's a nice walk."
             } else if(markerId == "Es Baluard Museum") {
-                "This is the modern art museum."
+                "Es Baluard is the modern art museum."
             } else if(markerId == "Puzzle2") {
-                "Nice little store with very friedly staff and lots of mind teasers."
+                "Puzzle2 is a nice little store with very friedly staff and lots of mind teasers."
             }
         })
     }
