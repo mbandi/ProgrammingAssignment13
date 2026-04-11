@@ -2,7 +2,11 @@
 title: "Fancy Map App"
 author: "mbandi"
 date: "`r Sys.Date()`"
-output: slidy_presentation
+output: 
+    ioslides_presentation: 
+      transition: slower
+      theme: cosmo
+      highlight: tango
 ---
 
 ```{r setup, include=FALSE}
@@ -11,40 +15,34 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Fancy Map App
 
-The Fancy Map App is an extension of the leaflet assignment.
+Printing information on top of a map is easy. 
 
+But what about detecting when the user clicks something inside the map?
 
-It has a sidebar with two tabs
+That's easy too!
 
-    - The first tab is used to display the selected marker description.
-    - The second tab is used to show the distance between two markers. 
+With the Fancy Map App you can learn how to handle user clicks events in leaflet
 
-The main panel is for the map
+> - While also knowing were to go for some nice views
+> - Or to see some fancy art
+> - Or where to get the best ice cream
 
-    - Each marker has it's own popup and id, and belongs to a group.
-    - Groups can be shown/hidden with the checkboxes from the map.
 
 ## Map functionality
 
-Selecting a marker will change the description shown in the 'Description' tab, but also save that marker for the distance calculation.
+The user can select the types of markers to be shown easily by clicking the categories in the map itself.
+It has the information organized in tabs to keep things tidy.
 
-When clicking multiple markers, the first one is kept, and the second is overridden. 
+- The 'Info' tab contains a brief user manual, in case it's needed
 
-To select a new initial marker there is a reset button in the 'Distance' tab.
+- The 'Details tab has information about the selected marker
 
-## Interaction and observers
+- The 'Distance' tab shows the distance between two markers
 
-Most of the interaction occurs by selecting markers on the map. For this reason most of the changes are handled inside the `observeEvent(input$map_marker_click, {...})` event:
-
-    - Updates the description text
-    - Store the marker as either `markerA` or `markerB` (and the associated text)
-    - Updates the distance between the two selected markers
-    
-The `Reset` button has it's own observer and it's only purpose is to clear the selected markers and set the corresponding message
 
 ## Distance calculation
 
-To calculate the distance between two markers I use the raster package.
+To calculate the distance between two markers the raster package is used.
 It's simple to use, it just needs the coordinates and returns the distance in meters.
 
 ```{r load, echo=TRUE, message=FALSE}
@@ -56,3 +54,13 @@ centralParkSouth <- c(-73.979005, 40.766994)
 centralParkNorth <- c(-73.955402, 40.799412)
 pointDistance(centralParkSouth, centralParkNorth, lonlat = TRUE)
 ```
+
+## Links
+
+You can check the live app here:
+[https://mbandi.shinyapps.io/FancyMap/](https://mbandi.shinyapps.io/FancyMap/)
+
+The source code is in github:
+[https://github.com/mbandi/ProgrammingAssignment13](https://github.com/mbandi/ProgrammingAssignment13)
+
+> - Thank you!
