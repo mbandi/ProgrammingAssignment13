@@ -27,7 +27,7 @@ fluidPage(
     sidebarLayout(
         sidebarPanel(
             tabsetPanel(type = "tabs", 
-                        tabPanel("Info", br(), 
+                        tabPanel("Documentation", br(), 
                                  HTML("<ul>
                                             <li>Use the checkboxes in the map to show/hide categories</li>
                                             <li>'Details' tab shows the selected marker information</li>
